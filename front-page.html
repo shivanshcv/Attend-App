@@ -57,26 +57,35 @@
       var c=document.getElementById('pop');
       b.onclick=function(event){
         event.preventDefault();
-        if(document.getElementById('email').value.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/)
-        &&document.getElementById('password').value.length>=4)
+        // if(document.getElementById('email').value.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/)
+        // &&document.getElementById('password').value.length>=4)
+        console.log(document.getElementById('password').value);
+        if(document.getElementById('email').value=="shivansh.cv12@gmail.com"&&
+      document.getElementById('password').value=="abcd")
         {
 
-          c.innerHTML="";
-          var d=document.createTextNode("Hi!! "+ document.getElementById('email').value);
-          var e = document.createElement("button");
-          e.appendChild(document.createTextNode("OK"));
-          e.setAttribute("id","popbttn");
-          e.setAttribute("class","popbttn");
-          c.appendChild(d);
-          c.appendChild(document.createElement("br"));
-          c.appendChild(document.createElement("div").appendChild(e));
-          document.getElementById('email').value="";
-          document.getElementById('password').value="";
-          document.getElementById('popo').style.display = "block";
-          document.getElementById("popbttn").addEventListener("click", function(event){
-            event.preventDefault();
-            document.getElementById('popo').style.display='none'
-          });
+          // c.innerHTML="";
+          // var d=document.createTextNode("Hi!! "+ document.getElementById('email').value);
+          // var e = document.createElement("button");
+          // e.appendChild(document.createTextNode("OK"));
+          // e.setAttribute("id","popbttn");
+          // e.setAttribute("class","popbttn");
+          // c.appendChild(d);
+          // c.appendChild(document.createElement("br"));
+          // c.appendChild(document.createElement("div").appendChild(e));
+          //
+          // document.getElementById('popo').style.display = "block";
+          // document.getElementById("popbttn").addEventListener("click", function(event){
+          //   event.preventDefault();
+          //   document.getElementById('popo').style.display='none'
+          // });
+          sessionStorage.setItem('ok',document.getElementById('email').value);
+
+
+        
+            location.href="./2.html";
+
+
 
         }
         else {
